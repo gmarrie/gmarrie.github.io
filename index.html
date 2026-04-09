@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cozy Research World</title>
+  <title>Gabrielle Arrieta</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
@@ -70,6 +70,7 @@
       100% { width: 100%; }
     }
 
+    /* MAIN */
     #main { display: none; }
 
     header {
@@ -78,12 +79,12 @@
     }
 
     header h1 {
-      font-size: 14px;
+      font-size: 18px;
       color: var(--accent);
     }
 
     header p {
-      font-size: 10px;
+      font-size: 12px;
       color: var(--accent2);
     }
 
@@ -100,7 +101,7 @@
       color: var(--text);
       border: 2px solid var(--accent);
       padding: 8px;
-      font-size: 8px;
+      font-size: 9px;
       border-radius: 10px;
       background: #fff;
       box-shadow: 2px 2px 0 var(--shadow);
@@ -128,22 +129,43 @@
     }
 
     .card h2 {
-      font-size: 10px;
+      font-size: 12px;
       color: var(--accent);
     }
 
     .card p {
-      font-size: 9px;
-      line-height: 1.6;
+      font-size: 10px;
+      line-height: 1.9;
+    }
+
+    /* HOME LAYOUT */
+    .home-flex {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      flex-wrap: wrap;
     }
 
     .profile-pic {
-      width: 220px;
-      height: 220px;
+      width: 280px;
+      height: 280px;
       border-radius: 20px;
       border: 3px solid var(--accent);
       object-fit: cover;
-      margin-top: 10px;
+    }
+
+    .home-text h1 {
+      font-size: 20px;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .home-text h3 {
+      font-size: 12px;
+      color: var(--accent2);
+      margin-top: 0;
+      line-height: 2.2;
+      margin-bottom: 16px;
     }
 
     footer {
@@ -169,8 +191,8 @@
 <div id="main">
 
 <header>
-  <h1>YOUR_NAME</h1>
-  <p>Welcome !!! 🌿</p>
+  <h1>GABRIELLE M. ARRIETA</h1>
+  <p>Welcome 🌿</p>
 </header>
 
 <nav>
@@ -186,28 +208,32 @@
 
 <div class="container">
 
-  <!-- HOME PAGE ONLY CONTENT -->
   <div class="card">
     <h2>🏠 HOME</h2>
 
-    <h1 style="font-size:14px; color: var(--accent); margin-bottom:6px;">Gabrielle M. Arrieta</h1>
-    <h3 style="font-size:10px; color: var(--accent2); margin-top:0;">
-      PhD Student - Center fro Research into Ecological and Environmental Modelling (CREEM) - University of St Andrews School of Biology
-    </h3>
+    <div class="home-flex">
 
-    <p>
-      Welcome to my research world — a cozy archive of my academic journey.<br><br>
-      I am a researcher working at the intersection of ocean acoustics, marine biology and statistics.
-      My work focuses on using large-scale, opportunistic acoustic datasets to estimate the density/abundance of baleen whales.<br><br>
-      I enjoy exploring underwater soundscapes, thinking about temporal and spatial variability in whale calls and using acoustic data to understand the ocean.<br><br>
-      Outside of research, I like playing cozy games, baking and encouraging others like me to explore the world of acoustics.
-    </p>
+      <img class="profile-pic" src="Azores_Meteor_Pic.jpg" alt="Profile picture" />
 
-    <p style="font-size:8px; color:#666; margin-top:10px;">
-      <b>Research interests:</b> ocean acoustics • marine bioacoustics • whale vocalisations • coding • signal processing • passive acoustic monitoring • density estimation
-    </p>
+      <div class="home-text">
+        <h1>Gabrielle M. Arrieta</h1>
+        <h3>
+          PhD Student - Center for Research into Ecological and Environmental Modelling (CREEM) - University of St Andrews School of Biology
+        </h3>
 
-    <img class="profile-pic" src="Azores_Meteor_Pic.jpg" alt="Your profile picture" />
+        <p>
+          Welcome to my research world — a cozy archive of my academic journey.<br><br>
+          I am a researcher working at the intersection of ocean acoustics, marine biology and statistics. My work focuses on using large-scale, opportunistic acoustic datasets to estimate the density/abundance of baleen whales.<br><br>
+          I enjoy exploring underwater soundscapes, thinking about temporal and spatial variability in whale calls and using acoustic data to understand the ocean.<br><br>
+          Outside of research, I like playing cozy games, baking and encouraging others like me to explore the world of acoustics.
+        </p>
+
+        <p style="font-size:9px; margin-top:14px;">
+          <b>Research interests:</b> ocean acoustics • marine bioacoustics • whale vocalisations • coding • signal processing • passive acoustic monitoring • density estimation
+        </p>
+      </div>
+
+    </div>
   </div>
 
 </div>
@@ -229,4 +255,3 @@
 
 </body>
 </html>
-
