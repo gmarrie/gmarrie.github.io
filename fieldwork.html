@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fieldwork</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Press Start 2P', monospace;
+      background: linear-gradient(180deg, #f7f3ea, #e9f5ef);
+    }
+
+    header {
+      text-align: center;
+      padding: 30px;
+      font-size: 16px;
+      color: #7cc9a6;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 50px;
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 4px 4px 0 rgba(0,0,0,0.08);
+    }
+
+    .section-title {
+      font-size: 14px;
+      margin-bottom: 25px;
+      color: #7cc9a6;
+    }
+
+    .image-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .image-row img {
+      width: 30%;
+      border-radius: 14px;
+      object-fit: cover;
+      transition: 0.2s;
+    }
+
+    .image-row img:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 700px) {
+      .image-row img {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>FIELDWORK LOG 🌊</header>
+
+<div class="container">
+
+  <div class="section">
+    <div class="section-title">Southern California Expeditions (2021-2023)</div>
+    <div class="image-row" id="SOCAL"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Gulf of Mexico (2023)</div>
+    <div class="image-row" id="GOM"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Azores (2023/2024/2025)</div>
+    <div class="image-row" id="AZORES"></div>
+  </div>
+
+</div>
+
+<script>
+  // 👇 LIST IMAGES PER FOLDER
+  const imageSets = {
+    SOCAL: [
+      "fieldwork/SOCAL/FullSizeRender.jpg",
+      "fieldwork/SOCAL/IMG_0143.jpg",
+      "fieldwork/SOCAL/IMG_1848.jpg",
+      "fieldwork/SOCAL/IMG_4092.jpg",
+      "fieldwork/SOCAL/IMG_5034.jpg",
+      "fieldwork/SOCAL/IMG_5978.jpg",
+      "fieldwork/SOCAL/IMG_9084.jpg",
+      "fieldwork/SOCAL/IMG_9086.jpg",
+      "fieldwork/SOCAL/IMG_9182.jpg"  
+    ],
+    GOM: [
+      "fieldwork/GOM/04b75a6e-54ae-4e37-818d-2d426581011a.jpg",
+      "fieldwork/GOM/74468618-9fa0-4e4f-ae52-04568f653e00.jpg",
+      "fieldwork/GOM/FullSizeRender.jpg",
+      "fieldwork/GOM/IMG_0672.jpg",
+      "fieldwork/GOM/IMG_0753.jpg",
+      "fieldwork/GOM/IMG_0782.jpg",
+      "fieldwork/GOM/IMG_6350.jpg",
+      "fieldwork/GOM/IMG_6360.jpg",
+      "fieldwork/GOM/IMG_6395.jpg",
+      "fieldwork/GOM/IMG_6460.jpg"
+    ],
+    AZORES: [
+      "fieldwork/AZORES/2c8726e6-1c75-4df2-ae8a-36e97732256b.jpg",
+      "fieldwork/AZORES/8f95fb6b-eda7-4af6-9fd1-d8d91947786b.jpg",
+      "fieldwork/AZORES/40afcc69-d7ae-45d3-868c-14a73d000792.jpg",
+      "fieldwork/AZORES/425d3bad-9455-4354-a148-2644410071d1.jpg",
+      "fieldwork/AZORES/852212d3-707d-4091-9ae6-ea262403cfe2.jpg",
+      "fieldwork/AZORES/a17d3450-da86-41db-93de-1379da31d52d.jpg",
+      "fieldwork/AZORES/abb1dd0a-6ebc-4264-aeba-27bf3c26eb32.jpg",
+      "fieldwork/AZORES/cb6dad24-35ad-40b4-b76d-9624888dc8a9.jpg",
+      "fieldwork/AZORES/IMG_1169.jpg",
+      "fieldwork/AZORES/IMG_1189.jpg",
+      "fieldwork/AZORES/IMG_1237.jpg",
+      "fieldwork/AZORES/IMG_1339.jpg",
+      "fieldwork/AZORES/IMG_1350.jpg",
+      "fieldwork/AZORES/IMG_1921.jpg",
+      "fieldwork/AZORES/IMG_1986.jpg",
+      "fieldwork/AZORES/IMG_2235.jpg",
+      "fieldwork/AZORES/IMG_5471.jpg",
+      "fieldwork/AZORES/IMG_5488.jpg",
+      "fieldwork/AZORES/IMG_5492.jpg",
+      "fieldwork/AZORES/IMG_6427.jpg",
+      "fieldwork/AZORES/IMG_6861.jpg",
+    ]
+  };
+
+  function getRandomImages(arr, n) {
+    return arr.sort(() => 0.5 - Math.random()).slice(0, n);
+  }
+
+  function populateSection(sectionId, images) {
+    const selected = getRandomImages(images, 3);
+    const container = document.getElementById(sectionId);
+
+    selected.forEach(src => {
+      const img = document.createElement("img");
+      img.src = src;
+      container.appendChild(img);
+    });
+  }
+
+  populateSection("SOCAL", imageSets.SOCAL);
+  populateSection("GOM", imageSets.GOM);
+  populateSection("AZORES", imageSets.AZORES);
+</script>
+
+</body>
+</html>
