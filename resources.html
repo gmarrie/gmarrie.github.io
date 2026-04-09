@@ -24,15 +24,16 @@
       font-family: 'Press Start 2P', monospace;
       background: linear-gradient(180deg, #f7f3ea, #e9f5ef);
       color: var(--text);
+      line-height: 1.9;
     }
 
     header {
       text-align: center;
-      padding: 30px;
+      padding: 35px;
     }
 
     header h1 {
-      font-size: 14px;
+      font-size: 18px;
       color: var(--accent);
     }
 
@@ -40,16 +41,16 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 10px;
-      padding: 10px;
+      gap: 12px;
+      padding: 12px;
     }
 
     nav a {
       text-decoration: none;
       color: var(--text);
       border: 2px solid var(--accent);
-      padding: 8px;
-      font-size: 8px;
+      padding: 10px;
+      font-size: 9px;
       border-radius: 10px;
       background: #fff;
       box-shadow: 2px 2px 0 var(--shadow);
@@ -61,15 +62,14 @@
     }
 
     .container {
-      max-width: 900px;
+      max-width: 950px;
       margin: auto;
-      padding: 20px;
+      padding: 25px;
     }
 
-    /* ROW LAYOUT FOR MULTIPLE CARDS */
     .resource-row {
       display: flex;
-      gap: 20px;
+      gap: 25px;
       flex-wrap: wrap;
       align-items: stretch;
     }
@@ -77,18 +77,18 @@
     .resource-card {
       background: var(--panel);
       border-radius: 16px;
-      padding: 20px;
+      padding: 26px;
       border: 2px solid #e8e3d9;
       box-shadow: 4px 4px 0 var(--shadow);
       display: flex;
-      gap: 20px;
+      gap: 25px;
       flex: 1;
-      min-width: 320px;
+      min-width: 340px;
     }
 
     .resource-card img {
-      width: 180px;
-      height: 180px;
+      width: 260px;
+      height: 260px;
       border-radius: 16px;
       object-fit: cover;
       border: 3px solid var(--accent);
@@ -96,27 +96,28 @@
 
     .resource-content {
       flex: 1;
-      min-width: 200px;
+      min-width: 220px;
     }
 
     .resource-title {
-      font-size: 12px;
+      font-size: 13px;
       color: var(--accent);
-      margin-bottom: 10px;
+      margin-bottom: 14px;
+      line-height: 1.9;
     }
 
     .resource-blurb {
-      font-size: 9px;
-      line-height: 1.6;
-      margin-bottom: 15px;
+      font-size: 10px;
+      line-height: 2;
+      margin-bottom: 18px;
     }
 
     .links a {
       display: inline-block;
-      margin-right: 10px;
-      margin-top: 5px;
-      font-size: 8px;
-      padding: 6px;
+      margin-right: 12px;
+      margin-top: 8px;
+      font-size: 9px;
+      padding: 8px;
       border: 2px solid var(--accent);
       border-radius: 8px;
       text-decoration: none;
@@ -131,8 +132,8 @@
 
     footer {
       text-align: center;
-      padding: 20px;
-      font-size: 8px;
+      padding: 25px;
+      font-size: 9px;
       color: #888;
     }
   </style>
@@ -158,7 +159,6 @@
 
   <div class="resource-row">
 
-    <!-- EXISTING ECS BOX -->
     <div class="resource-card">
       <img class="whale-pic" src="ECS_whaleDetectability.png" alt="ECS poster" />
 
