@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cozy Game Portfolio</title>
+  <title>Gabrielle Arrieta</title>
 
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 
@@ -17,9 +17,7 @@
       --shadow: rgba(0,0,0,0.08);
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -40,18 +38,18 @@
       z-index: 9999;
     }
 
-    .loader-bunny {
-      font-size: 40px;
-      animation: bounce 1s infinite;
+    .loader-whale {
+      font-size: 44px;
+      animation: float 1.5s infinite ease-in-out;
     }
 
-    @keyframes bounce {
+    @keyframes float {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
+      50% { transform: translateY(-12px); }
     }
 
     .loading-bar {
-      width: 200px;
+      width: 220px;
       height: 12px;
       border: 2px solid var(--accent);
       margin-top: 20px;
@@ -72,9 +70,7 @@
       100% { width: 100%; }
     }
 
-    #main {
-      display: none;
-    }
+    #main { display: none; }
 
     header {
       padding: 40px 20px;
@@ -82,7 +78,7 @@
     }
 
     header h1 {
-      font-size: 16px;
+      font-size: 14px;
       color: var(--accent);
     }
 
@@ -93,8 +89,9 @@
 
     nav {
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 15px;
+      gap: 10px;
       padding: 10px;
     }
 
@@ -103,10 +100,11 @@
       color: var(--text);
       border: 2px solid var(--accent);
       padding: 8px;
-      font-size: 9px;
-      border-radius: 8px;
+      font-size: 8px;
+      border-radius: 10px;
       background: #fff;
       box-shadow: 2px 2px 0 var(--shadow);
+      transition: 0.2s;
     }
 
     nav a:hover {
@@ -130,13 +128,22 @@
     }
 
     .card h2 {
-      font-size: 11px;
+      font-size: 10px;
       color: var(--accent);
     }
 
     .card p {
       font-size: 9px;
       line-height: 1.6;
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 20px;
+      border: 3px solid var(--accent);
+      object-fit: cover;
+      margin-top: 10px;
     }
 
     footer {
@@ -151,8 +158,8 @@
 
 <!-- LOADING SCREEN -->
 <div id="loading-screen">
-  <div class="loader-bunny">🐰</div>
-  <p>Waking up the cozy world...</p>
+  <div class="loader-whale">🐋</div>
+  <p>Waking the deep ocean of knowledge...</p>
   <div class="loading-bar">
     <div class="loading-fill"></div>
   </div>
@@ -162,37 +169,75 @@
 <div id="main">
 
 <header>
-  <h1>COZY PLAYER: YOUR_NAME</h1>
-  <p>Welcome home, traveler 🌿</p>
+  <h1>RESEARCHER NODE: GABRIELLE ARRIETA</h1>
+  <p>Welcome !!! 🌿</p>
 </header>
 
 <nav>
-  <a href="#about">ABOUT</a>
-  <a href="#projects">GARDEN</a>
-  <a href="#contact">MAILBOX</a>
+  <a href="#home">HOME</a>
+  <a href="#code">CODE</a>
+  <a href="#publications">PUBLICATIONS</a>
+  <a href="#talks">TALKS</a>
+  <a href="#teaching">TEACHING & SERVICE</a>
+  <a href="#cv">CV</a>
 </nav>
 
 <div class="container">
 
-  <div class="card" id="about">
-    <h2>🌱 ABOUT ME</h2>
-    <p>A gentle little corner of the internet. Write your cozy bio here — what you love, what you’re learning, and what makes your world soft and warm.</p>
+  <!-- HOME -->
+  <div class="card" id="home">
+    <h2>🏠 HOME</h2>
+    <p>Welcome to my research world — a cozy archive of ideas, projects, and academic journeys.</p>
+    
+    <img class="profile-pic" src="https://via.placeholder.com/300" alt="Your profile picture" />
   </div>
 
-  <div class="card" id="projects">
-    <h2>🌼 PROJECT GARDEN</h2>
-    <p>• Tiny Project One: something peaceful<br>• Tiny Project Two: something fun<br>• Tiny Project Three: something magical</p>
+  <!-- CODE -->
+  <div class="card" id="code">
+    <h2>💻 CODE</h2>
+    <p>Repositories, experiments, and computational tools I use in research.</p>
   </div>
 
-  <div class="card" id="contact">
-    <h2>📬 MAILBOX</h2>
-    <p>Email: your@email.com<br>GitHub: github.com/yourname</p>
+  <!-- RESOURCES -->
+  <div class="card" id="resources">
+    <h2>📚 RESOURCES</h2>
+    <p>Papers, datasets, software, and learning materials.</p>
+  </div>
+
+  <!-- PUBLICATIONS -->
+  <div class="card" id="publications">
+    <h2>📄 PUBLICATIONS</h2>
+    <p>My academic papers and preprints will appear here.</p>
+  </div>
+
+  <!-- TALKS -->
+  <div class="card" id="talks">
+    <h2>🎤 TALKS</h2>
+    <p>Conferences, seminars, and invited talks.</p>
+  </div>
+
+  <!-- TEACHING -->
+  <div class="card" id="teaching">
+    <h2>📖 TEACHING</h2>
+    <p>Courses, tutorials, and mentoring activities.</p>
+  </div>
+
+  <!-- SERVICE -->
+  <div class="card" id="service">
+    <h2>🤝 SERVICE</h2>
+    <p>Peer review, committee work, and academic service contributions.</p>
+  </div>
+
+  <!-- CV -->
+  <div class="card" id="cv">
+    <h2>📎 CV</h2>
+    <p>Download my academic CV (add link here).</p>
   </div>
 
 </div>
 
 <footer>
-  soft mode enabled ✨ | everything is okay
+  deep sea research mode active 🌊 | knowledge flowing
 </footer>
 
 </div>
