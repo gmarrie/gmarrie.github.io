@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cozy Game Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f3f0e7;
+      --panel: #ffffff;
+      --accent: #7cc9a6;
+      --accent2: #f2b880;
+      --text: #2f2f2f;
+      --shadow: rgba(0,0,0,0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Press Start 2P', monospace;
+      background: linear-gradient(180deg, #f7f3ea, #e9f5ef);
+      color: var(--text);
+    }
+
+    /* LOADING SCREEN */
+    #loading-screen {
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(180deg, #fff7ec, #eaf6f0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .loader-bunny {
+      font-size: 40px;
+      animation: bounce 1s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-15px); }
+    }
+
+    .loading-bar {
+      width: 200px;
+      height: 12px;
+      border: 2px solid var(--accent);
+      margin-top: 20px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+    }
+
+    .loading-fill {
+      height: 100%;
+      width: 0%;
+      background: var(--accent);
+      animation: load 3s ease forwards;
+    }
+
+    @keyframes load {
+      0% { width: 0%; }
+      100% { width: 100%; }
+    }
+
+    #main {
+      display: none;
+    }
+
+    header {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 16px;
+      color: var(--accent);
+    }
+
+    header p {
+      font-size: 10px;
+      color: var(--accent2);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      padding: 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--text);
+      border: 2px solid var(--accent);
+      padding: 8px;
+      font-size: 9px;
+      border-radius: 8px;
+      background: #fff;
+      box-shadow: 2px 2px 0 var(--shadow);
+    }
+
+    nav a:hover {
+      background: var(--accent);
+      color: white;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: var(--panel);
+      border-radius: 16px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 4px 4px 0 var(--shadow);
+      border: 2px solid #e8e3d9;
+    }
+
+    .card h2 {
+      font-size: 11px;
+      color: var(--accent);
+    }
+
+    .card p {
+      font-size: 9px;
+      line-height: 1.6;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 8px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+<!-- LOADING SCREEN -->
+<div id="loading-screen">
+  <div class="loader-bunny">🐰</div>
+  <p>Waking up the cozy world...</p>
+  <div class="loading-bar">
+    <div class="loading-fill"></div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main">
+
+<header>
+  <h1>COZY PLAYER: YOUR_NAME</h1>
+  <p>Welcome home, traveler 🌿</p>
+</header>
+
+<nav>
+  <a href="#about">ABOUT</a>
+  <a href="#projects">GARDEN</a>
+  <a href="#contact">MAILBOX</a>
+</nav>
+
+<div class="container">
+
+  <div class="card" id="about">
+    <h2>🌱 ABOUT ME</h2>
+    <p>A gentle little corner of the internet. Write your cozy bio here — what you love, what you’re learning, and what makes your world soft and warm.</p>
+  </div>
+
+  <div class="card" id="projects">
+    <h2>🌼 PROJECT GARDEN</h2>
+    <p>• Tiny Project One: something peaceful<br>• Tiny Project Two: something fun<br>• Tiny Project Three: something magical</p>
+  </div>
+
+  <div class="card" id="contact">
+    <h2>📬 MAILBOX</h2>
+    <p>Email: your@email.com<br>GitHub: github.com/yourname</p>
+  </div>
+
+</div>
+
+<footer>
+  soft mode enabled ✨ | everything is okay
+</footer>
+
+</div>
+
+<script>
+  window.addEventListener('load', () => {
+    setTimeout(() => {
+      document.getElementById('loading-screen').style.display = 'none';
+      document.getElementById('main').style.display = 'block';
+    }, 3200);
+  });
+</script>
+
+</body>
+</html>
