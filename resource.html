@@ -66,6 +66,14 @@
       padding: 20px;
     }
 
+    /* ROW LAYOUT FOR MULTIPLE CARDS */
+    .resource-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      align-items: stretch;
+    }
+
     .resource-card {
       background: var(--panel);
       border-radius: 16px;
@@ -74,8 +82,8 @@
       box-shadow: 4px 4px 0 var(--shadow);
       display: flex;
       gap: 20px;
-      flex-wrap: wrap;
-      align-items: flex-start;
+      flex: 1;
+      min-width: 320px;
     }
 
     .resource-card img {
@@ -88,7 +96,7 @@
 
     .resource-content {
       flex: 1;
-      min-width: 250px;
+      min-width: 200px;
     }
 
     .resource-title {
@@ -148,26 +156,49 @@
 
 <div class="container">
 
-  <div class="resource-card">
-    <img class="whale-pic" src="ECS_whaleDetectability.png" alt="ECS poster" />
+  <div class="resource-row">
 
-    <div class="resource-content">
-      <div class="resource-title">
-      Using large-scale seismometer data to detect fin whale calls in the North Atlantic:
-      implications for population density estumation
-      </div>
+    <!-- NEW LEFT BOX -->
+    <div class="resource-card">
+      <img src="DCallSeq_Thesis.png" alt="figure 2" />
 
-      <div class="resource-blurb">
-        Resources for my European Cetacean Society (ECS) Conference Poster Presentation in Dundee, Scotland in April 2026.
-        This poster focuses how site and temporal variability in detections relate to bias in density estimates.
-      </div>
+      <div class="resource-content">
+        <div class="resource-title">
+          Calling Behavior and Localization of Blue Whales in Southern California
+        </div>
 
-      <div class="links">
-        <a href="ECS_Abstract_Draft_GMA.pdf">Abstract</a>
-        <a href="ECS_Poster_GMA.pdf">Poster</a>
-        <a href="ECS_Poster_References_GMA.pdf">References</a>
+        <div class="resource-blurb">
+          This is research I did in my master's as a Scripps Institution of Oceanography (SIO) student in the Scripps Acoustic Ecology Lab (SAEL). This research focuses on using acoustic data to investigate the NE Pacific Blue Whale D call. This work is currently being prepared for publication. 
+        </div>
+
+        <div class="links">
+          <a href="https://sael.ucsd.edu/">SAEL</a>
+          <a href="GMA_UCSD_Masters_Thesis.pdf">Master's Thesis</a>
+        </div>
       </div>
     </div>
+
+    <!-- EXISTING ECS BOX -->
+    <div class="resource-card">
+      <img class="whale-pic" src="ECS_whaleDetectability.png" alt="ECS poster" />
+
+      <div class="resource-content">
+        <div class="resource-title">
+          Using large-scale seismometer data to detect fin whale calls in the North Atlantic: implications for population density estimation
+        </div>
+
+        <div class="resource-blurb">
+          Resources for my European Cetacean Society (ECS) Conference Poster Presentation in Dundee, Scotland in April 2026. This poster focuses on how site and temporal variability in detections relate to bias in density estimates.
+        </div>
+
+        <div class="links">
+          <a href="ECS_Abstract_Draft_GMA.pdf">Abstract</a>
+          <a href="ECS_Poster_GMA.pdf">Poster</a>
+          <a href="ECS_Poster_References_GMA.pdf">References</a>
+        </div>
+      </div>
+    </div>
+
   </div>
 
 </div>
